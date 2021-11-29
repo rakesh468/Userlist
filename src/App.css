@@ -1,0 +1,60 @@
+.container{  
+   width:310px;
+   margin-top: 10px;
+}
+
+.profile-pic{
+    height:300px;
+    width: 310px;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.cover{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:15px;
+}
+.show-button{
+    font-size: 15px;
+}
+.details{
+    font-weight: bold;
+}
+.movies-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    margin:15px;
+    gap:10px
+}
+nav{
+    font-size: 20px;
+    margin:15px;
+    display: flex;
+    gap:30px;
+    
+}
+.image{
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+.error{
+    text-align: center;
+    color:red;
+    
+}
+.detail-container{
+    margin: 20px;
+}
+.profile-pic:hover{
+    cursor: pointer;
+}
