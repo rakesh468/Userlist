@@ -1,15 +1,6 @@
-.container{  
-   width:310px;
-   margin-top: 10px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.profile-pic{
-    height:300px;
-    width: 310px;
-    object-fit: cover;
-    /* border-radius: 10px; */
-    
-}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -24,7 +15,7 @@ body{
     font-size: 15px;
 }
 .details{
-    font-weight: bold;
+    font-weight: 200;
 }
 .movies-form{
     display: flex;
@@ -32,16 +23,11 @@ body{
     flex-wrap: wrap;
     align-items: stretch;
     align-content: stretch;
-    margin:15px;
+    /* margin:15px; */
+    padding: 5px;
     gap:10px
 }
-nav{
-    font-size: 20px;
-    margin:15px;
-    display: flex;
-    gap:30px;
-    
-}
+
 .image{
     height: 500px;
     width: 100%;
@@ -52,9 +38,5 @@ nav{
     color:red;
     
 }
-.detail-container{
-    margin: 20px;
-}
-.profile-pic:hover{
-    cursor: pointer;
-}
+
+

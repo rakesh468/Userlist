@@ -1,0 +1,15 @@
+.container {
+  width: 310px;
+  margin-top: 10px;
+  transition:transform 100ms ease-in;
+}
+.container:hover{
+  transform:scale(1.02)
+}
+.profile-pic {
+  height: 300px;
+  width: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}

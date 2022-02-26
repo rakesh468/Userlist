@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: whitesmoke;
+}
+.Logo{
+    height: 45px;
+    width: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.nav-links{
+    display: flex;
+    /* justify-content: flex-start; */
+    list-style: none;
+    width: 75%;
+}
+
+.Home,
+.Skills,
+.Contact,
+.About{
+text-decoration: none;
+color: black;
+font-size: 20px;
+padding:10px 20px;
+margin:0 10px;
+cursor: pointer;
+font-size: 20px;
+font-weight: bolder;
+}
+
+
+.mobile-menu-icon{
+    display: none;
+}
+
+@media (max-width:700px){
+    .Logo{
+        display: flex;
+        position: absolute;
+        left:35px;
+        
+
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color:black;
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 100vw;
+    }
+    .Home,
+    .Contact,
+    .About,
+    .Skills{
+        color: white;
+        text-align: center;
+        width: 100%;
+        transition: all 0.5 ease;
+       
+    }
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size:30px ;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
+}
