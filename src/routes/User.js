@@ -48,10 +48,10 @@ export function User({
           <InfoIcon />
         </IconButton>
         {editButton}
-        <p style={styles}>Name : {name}</p>
-        <p style={styles}>UserName : {username}</p>
-        <p style={styles}>Email : {email}</p>
-        <p style={styles}>Phone No : {phone}</p>
+        <p style={styles}><b>Name:</b> {name}</p>
+        <p style={styles}><b>UserName:</b>  {username}</p>
+        <p style={styles}><b>Email :</b> {email}</p>
+        <p style={styles}><b>Phone No :</b> {phone}</p>
       </CardContent>
       <CardActions>{deleteButton}</CardActions>
     </Card>
