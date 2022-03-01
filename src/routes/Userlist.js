@@ -13,6 +13,8 @@ export function Userlist() {
   const getusers = () => {
     fetch(`${API_URL}/details`, {
       method: "GET",
+      headers:{"X-auth-token":localStorage.getItem('token')}
+      
     })
       .then((data) => data.json())
       .then((usr) => setusers(usr));
@@ -22,6 +24,7 @@ export function Userlist() {
   const deleteuser = (id) => {
     fetch(`${API_URL}/details/${id}`, {
       method: "DELETE",
+      headers:{"X-auth-token":localStorage.getItem('token')}
     }).then(() => getusers());
   };
 

@@ -17,6 +17,7 @@ export function Editusers() {
   useEffect(() => {
     fetch(`${API_URL}/details/${id}`, {
       method: "GET",
+      headers:{ "X-auth-token":localStorage.getItem('token'),}
     })
       .then((data) => data.json())
       .then((usr) => setuser(usr));
@@ -49,7 +50,9 @@ function Updateuser({ user }) {
     fetch(`${API_URL}/details/${user._id}`, {
       method: "PUT",
       body: JSON.stringify(updateduser),
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "X-auth-token":localStorage.getItem('token'),
+        "Content-Type": "application/json" },
     }).then(() => history.push("/users"));
   };
 

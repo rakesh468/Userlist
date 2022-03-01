@@ -14,6 +14,7 @@ export function Userdetails() {
   useEffect(() => {
     fetch(`${API_URL}/details/${id}`, {
       method: "GET",
+      headers:{ "X-auth-token":localStorage.getItem('token'),}
     })
       .then((data) => data.json())
       .then((usr) => setusers(usr));

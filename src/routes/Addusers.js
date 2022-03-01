@@ -39,7 +39,9 @@ export function Addusers() {
     fetch(`${API_URL}/details`, {
       method: "POST",
       body: JSON.stringify(newuser),
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "X-auth-token":localStorage.getItem('token'),
+        "Content-Type": "application/json" },
     }).then(() => history.push("/users"));
   };
   return (

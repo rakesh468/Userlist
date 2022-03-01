@@ -51,13 +51,18 @@ export function Login() {
     })
       .then((response) => {
         if (response.status === 200) {
-          setMsg({ Message: "Login Successfully", status: "success" });
-          setOpen(true);
-          setTimeout(() => history.push("/users"), 3000);
-        } else {
+          return response.json();
+         } else {
           setMsg({ Message: "Invalide Credentials", status: "error" });
           setOpen(true);
         }
+      })
+      .then((response)=>{
+        console.log(response)
+        localStorage.setItem('token',response.token)
+        setMsg({ Message: "Login Successfully", status: "success" });
+        setOpen(true);
+        setTimeout(() => history.push("/users"), 3000);
       })
       .catch((err) => {
         setMsg({ message: "error", status: "error" });
