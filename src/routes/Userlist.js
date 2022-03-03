@@ -13,7 +13,7 @@ export function Userlist() {
   const getusers = () => {
     fetch(`${API_URL}/details`, {
       method: "GET",
-      headers:{"X-auth-token":localStorage.getItem('token')}
+     
       
     })
       .then((data) => data.json())
